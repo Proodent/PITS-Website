@@ -2423,5 +2423,12 @@
             });
         });
     </script>
+    <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+        // Ensure form submits normally even inside modals
+        e.stopPropagation();
+    });
+    </script>
+
 </body>
 </html>
