@@ -1,0 +1,2433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proodent IT Solutions - Smart IT, Smarter Solutions | IT Services in Accra, Ghana</title>
+    <meta name="description" content="Proodent IT Solutions provides comprehensive IT services in Accra, Ghana including application development, website development, graphic design, computer networking, consultancy, data analysis, and digital marketing.">
+    <meta name="keywords" content="IT services Ghana, website development Accra, application development Ghana, computer networking Accra, digital marketing Ghana, IT consultancy Accra, data analysis Ghana">
+    <meta name="author" content="Proodent IT Solutions">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.proodentit.com">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Proodent IT Solutions - Smart IT, Smarter Solutions">
+    <meta property="og:description" content="Comprehensive IT services in Accra, Ghana including application development, website development, data analysis, and digital marketing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.proodentit.com">
+    <meta property="og:image" content="https://www.proodentit.com/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/Logo-01.png">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-green: #009245;
+            --dark-green: #006837;
+            --black: #000000;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --medium-gray: #e0e0e0;
+            --text-color: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+            overflow-x: hidden;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-icon img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-green);
+        }
+        
+        .logo-tagline {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--black);
+            font-weight: 400;
+            margin-top: -3px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-green);
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-green);
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-green);
+            margin-left: auto;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: var(--white);
+            padding: 180px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--white);
+            color: var(--dark-green);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+        
+        /* Technology Slider */
+        .tech-slider {
+            padding: 60px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .slider-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slide {
+            min-width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .slide:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+        }
+        
+        .slide-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+        }
+        
+        .slide h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .slide p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--medium-gray);
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .slider-dot.active {
+            background-color: var(--primary-green);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-green);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: var(--primary-green);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 600px;
+            margin: 20px auto 0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            border: 1px solid var(--medium-gray);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 3.5rem;
+            margin: 0 auto 20px;
+            color: var(--primary-green);
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-green);
+        }
+        
+        .service-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .service-details-btn {
+            display: inline-block;
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .service-details-btn:hover {
+            background-color: var(--dark-green);
+        }
+        
+        /* Service Details Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            background-color: var(--white);
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            position: relative;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-green);
+        }
+        
+        .modal-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .modal-icon {
+            font-size: 3rem;
+            margin-right: 20px;
+            color: var(--primary-green);
+        }
+        
+        .modal-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .modal-image {
+            background-color: var(--light-gray);
+            border-radius: 10px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-green);
+            font-weight: 500;
+        }
+        
+        .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .modal-features {
+            margin-top: 20px;
+        }
+        
+        .modal-features h4 {
+            margin-bottom: 10px;
+            color: var(--dark-green);
+        }
+        
+        .modal-features ul {
+            list-style-type: none;
+        }
+        
+        .modal-features li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .modal-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+        
+        /* Team Section - UPDATED */
+        .team {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+        }
+        
+        .team-member {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            padding: 20px 15px;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .member-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 3px solid var(--primary-green);
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--dark-green);
+        }
+        
+        .member-info .position {
+            color: var(--primary-green);
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .member-info p {
+            color: #666;
+            font-size: 0.8rem;
+            line-height: 1.5;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+        
+        .testimonial-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .testimonial-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 30px;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        
+        .testimonial-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-green);
+            font-size: 1.5rem;
+        }
+        
+        .testimonial-name {
+            font-weight: 600;
+            color: var(--dark-green);
+        }
+        
+        .testimonial-role {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--medium-gray);
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .testimonial-dot.active {
+            background-color: var(--primary-green);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--dark-green);
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .about-features {
+            margin-top: 30px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .feature-icon {
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--white);
+            font-size: 0.8rem;
+        }
+        
+        .about-image {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-image:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+        
+        .about-image-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* Core Values Section */
+        .core-values {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .value-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary-green);
+        }
+        
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-green);
+        }
+        
+        .value-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* Insights Section */
+        .insights {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+        
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .insight-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .insight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .insight-image {
+            height: 200px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-green);
+        }
+        
+        .insight-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .insight-content {
+            padding: 20px;
+        }
+        
+        .insight-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark-green);
+        }
+        
+        .insight-content p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .insight-read-more {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        
+        .insight-read-more:hover {
+            color: var(--dark-green);
+        }
+        
+        /* Insight Modal */
+        .insight-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+        
+        .insight-modal-content {
+            background-color: var(--white);
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            position: relative;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .close-insight-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-green);
+        }
+        
+        .insight-modal-header {
+            margin-bottom: 20px;
+        }
+        
+        .insight-modal-body {
+            line-height: 1.8;
+        }
+        
+        .insight-modal-body p {
+            margin-bottom: 15px;
+        }
+        
+        /* Contact Section - UPDATED */
+        .contact {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            color: var(--dark-green);
+            margin-bottom: 20px;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon-plain {
+            width: 24px;
+            margin-right: 15px;
+            color: var(--primary-green);
+            text-align: center;
+        }
+        
+        .contact-link {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-link:hover {
+            color: var(--primary-green);
+        }
+        
+        .business-hours {
+            margin-top: 30px;
+        }
+        
+        .business-hours h4 {
+            margin-bottom: 10px;
+            color: var(--dark-green);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: var(--dark-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .social-link:hover {
+            background-color: var(--primary-green);
+            transform: translateY(-5px);
+        }
+        
+        .contact-form {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark-green);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--medium-gray);
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .btn-submit {
+            background-color: var(--primary-green);
+            color: var(--white);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        
+        .btn-submit:hover {
+            background-color: var(--dark-green);
+        }
+        
+        /* Footer - UPDATED */
+        footer {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-green);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-logo-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--primary-green);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+            background: none !important;
+            padding: 0 !important;
+            border: none !important;
+            font-size: 1rem;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--primary-green);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Staggered Animation Delays */
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; }
+        .delay-6 { transition-delay: 0.6s; }
+        
+        /* Schema Markup */
+        .business-info {
+            display: none;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .team-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .about-content, .contact-container, .modal-body {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .slide {
+                height: 300px;
+            }
+            
+            .slide h3 {
+                font-size: 1.5rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <img src="images/Logo-01.png" alt="Proodent IT Solutions Logo" loading="lazy">
+                </div>
+                <div>
+                    <div class="logo-text">Proodent IT</div>
+                    <span class="logo-tagline">Smart IT, Smarter Solutions</span>
+                </div>
+            </a>
+            <div class="mobile-menu">☰</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#insights">Insights</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content fade-in">
+            <h1>Proodent IT Solutions</h1>
+            <div class="tagline">Smart IT, Smarter Solutions</div>
+            <p>We provide comprehensive technology services to help businesses thrive in the digital age. Based in Accra, Ghana.</p>
+            <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Technology Slider -->
+    <section class="tech-slider">
+        <div class="container fade-in">
+            <div class="slider-container">
+                <div class="slides">
+                    <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXBwbGljYXRpb24lMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D'); background-size: cover;">
+                        <div class="slide-content">
+                            <h3>Application Development</h3>
+                            <p>Custom software solutions tailored to your business needs</p>
+                        </div>
+                    </div>
+                    <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-size: cover;">
+                        <div class="slide-content">
+                            <h3>Website Development</h3>
+                            <p>Responsive, modern websites that drive business growth</p>
+                        </div>
+                    </div>
+                    <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-size: cover;">
+                        <div class="slide-content">
+                            <h3>Digital Marketing</h3>
+                            <p>Comprehensive strategies to increase your online presence</p>
+                        </div>
+                    </div>
+                    <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-size: cover;">
+                        <div class="slide-content">
+                            <h3>Computer Networking</h3>
+                            <p>Reliable network infrastructure for your business</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <div class="slider-dot active" data-slide="0"></div>
+                <div class="slider-dot" data-slide="1"></div>
+                <div class="slider-dot" data-slide="2"></div>
+                <div class="slider-dot" data-slide="3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Our Services</h2>
+                <p>We offer a wide range of IT services to meet your business needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in delay-1">
+                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Application Development</h3>
+                    <p>Custom software solutions tailored to your specific business requirements and processes. We build robust applications that streamline your operations and enhance productivity.</p>
+                    <button class="service-details-btn" data-service="app-dev">Read More</button>
+                </div>
+                <div class="service-card fade-in delay-2">
+                    <div class="service-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Website Development</h3>
+                    <p>Responsive, modern websites that provide excellent user experience and drive business growth. Our websites are optimized for performance and search engines.</p>
+                    <button class="service-details-btn" data-service="web-dev">Read More</button>
+                </div>
+                <div class="service-card fade-in delay-3">
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Graphic Design & Business Branding</h3>
+                    <p>Creative visual designs and comprehensive branding solutions that establish a strong identity for your business and resonate with your target audience.</p>
+                    <button class="service-details-btn" data-service="graphic-design">Read More</button>
+                </div>
+                <div class="service-card fade-in delay-4">
+                    <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Computer Networking</h3>
+                    <p>Reliable network infrastructure design, implementation, and maintenance services. We ensure your business stays connected and secure.</p>
+                    <button class="service-details-btn" data-service="networking">Read More</button>
+                </div>
+                <div class="service-card fade-in delay-5">
+                    <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Consultancy</h3>
+                    <p>Expert IT advice and strategic planning to optimize your technology investments. We help you make informed decisions for your digital transformation.</p>
+                    <button class="service-details-btn" data-service="consultancy">Read More</button>
+                </div>
+                <div class="service-card fade-in delay-6">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Digital Marketing</h3>
+                    <p>Comprehensive online marketing strategies to increase your brand visibility and customer reach. We drive traffic and generate leads for your business.</p>
+                    <button class="service-details-btn" data-service="digital-marketing">Read More</button>
+                </div>
+                <!-- New Data Analysis Service -->
+                <div class="service-card fade-in delay-1">
+                    <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Data Analysis</h3>
+                    <p>Transform your raw data into actionable insights. We help you make data-driven decisions to optimize operations, identify trends, and drive business growth.</p>
+                    <button class="service-details-btn" data-service="data-analysis">Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details Modals -->
+    <div id="app-dev-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fas fa-laptop-code"></i></div>
+                <div>
+                    <h3>Application Development</h3>
+                    <p>Custom software solutions for your business</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="https://sytbuildr.s3.eu-west-2.amazonaws.com/0406191c-f351-4a58-b164-b9521b3d78c5/fvHR3sBbhqzMP4q21UAGmVKwY24XQHCvwRas1Pd8.jpg?tr=w-1500" alt="Custom Application Development Illustration" loading="lazy">
+                </div>
+                <div>
+                    <p>Our application development services provide custom software solutions designed specifically for your business needs. We create robust, scalable applications that streamline your operations and enhance productivity.</p>
+                    <p>We work with various technologies and platforms to deliver solutions that meet your unique requirements. Our team follows agile development methodologies to ensure timely delivery and continuous improvement.</p>
+                    <div class="modal-features">
+                        <h4>What We Offer:</h4>
+                        <ul>
+                            <li>Custom desktop and mobile applications</li>
+                            <li>Cross-platform development</li>
+                            <li>Database design and integration</li>
+                            <li>API development and integration</li>
+                            <li>Quality assurance and testing</li>
+                            <li>Ongoing maintenance and support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="web-dev-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fas fa-globe"></i></div>
+                <div>
+                    <h3>Website Development</h3>
+                    <p>Responsive websites for modern businesses</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Responsive Website Development Illustration" loading="lazy">
+                </div>
+                <div>
+                    <p>We create stunning, responsive websites that not only look great but also deliver exceptional user experiences. Our websites are optimized for performance, SEO, and conversions.</p>
+                    <p>From simple brochure sites to complex e-commerce platforms, we build websites that help your business grow online. We focus on creating intuitive navigation, fast loading times, and mobile-friendly designs.</p>
+                    <div class="modal-features">
+                        <h4>What We Offer:</h4>
+                        <ul>
+                            <li>Responsive web design</li>
+                            <li>E-commerce solutions</li>
+                            <li>Content management systems</li>
+                            <li>SEO optimization</li>
+                            <li>Website maintenance</li>
+                            <li>Hosting and domain services</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="graphic-design-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fas fa-palette"></i></div>
+                <div>
+                    <h3>Graphic Design & Business Branding</h3>
+                    <p>Creative visual designs and comprehensive branding solutions</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Graphic Design Illustration" loading="lazy">
+                </div>
+                <div>
+                    <p>Our graphic design and branding services help businesses establish a strong visual identity. We create designs that communicate your brand's values and resonate with your target audience.</p>
+                    <p>From logos and business cards to complete brand guidelines, we ensure consistency across all your marketing materials. Our designs are not only visually appealing but also strategically crafted to support your business goals.</p>
+                    <div class="modal-features">
+                        <h4>What We Offer:</h4>
+                        <ul>
+                            <li>Logo design and branding</li>
+                            <li>Business card and stationery design</li>
+                            <li>Marketing materials (brochures, flyers)</li>
+                            <li>Social media graphics</li>
+                            <li>Packaging design</li>
+                            <li>Brand style guides</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="networking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fas fa-network-wired"></i></div>
+                <div>
+                    <h3>Computer Networking</h3>
+                    <p>Reliable network infrastructure for your business</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Computer Networking Illustration" loading="lazy">
+                </div>
+                <div>
+                    <p>We provide comprehensive computer networking solutions to keep your business connected and secure. Our networking services ensure reliable communication and data transfer within your organization.</p>
+                    <p>From small office networks to enterprise-level infrastructure, we design, implement, and maintain networks that meet your specific requirements. We prioritize security, scalability, and performance in all our networking solutions.</p>
+                    <div class="modal-features">
+                        <h4>What We Offer:</h4>
+                        <ul>
+                            <li>Network design and installation</li>
+                            <li>Wireless network setup</li>
+                            <li>Network security and firewall configuration</li>
+                            <li>Server setup and maintenance</li>
+                            <li>VPN and remote access solutions</li>
+                            <li>24/7 network monitoring and support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="consultancy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fas fa-briefcase"></i></div>
+                <div>
+                    <h3>IT Consultancy</h3>
+                    <p>Expert advice for your technology investments</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="IT Consultancy Illustration" loading="lazy">
+                </div>
+                <div>
+                    <p>Our IT consultancy services help businesses make informed decisions about their technology investments. We provide strategic guidance to optimize your IT infrastructure and align it with your business objectives.</p>
+                    <p>We analyze your current technology setup, identify areas for improvement, and recommend solutions that enhance efficiency, security, and productivity. Our consultants stay updated with the latest technology trends to provide relevant advice.</p>
+                    <div class="modal-features">
+                        <h4>What We Offer:</h4>
+                        <ul>
+                            <li>IT strategy and planning</li>
+                            <li>Technology needs assessment</li>
+                            <li>System architecture design</li>
+                            <li>Vendor selection and management</li>
+                            <li>Digital transformation guidance</li>
+                            <li>Technology roadmap development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="digital-marketing-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fas fa-chart-line"></i></div>
+                <div>
+                    <h3>Digital Marketing</h3>
+                    <p>Comprehensive online marketing strategies</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Digital Marketing Illustration" loading="lazy">
+                </div>
+                <div>
+                    <p>Our digital marketing services help businesses increase their online visibility and reach more customers. We develop comprehensive strategies that drive traffic, generate leads, and boost conversions.</p>
+                    <p>We combine various digital marketing techniques to create campaigns that deliver measurable results. From social media marketing to search engine optimization, we tailor our approach to meet your specific business goals.</p>
+                    <div class="modal-features">
+                        <h4>What We Offer:</h4>
+                        <ul>
+                            <li>Search Engine Optimization (SEO)</li>
+                            <li>Social Media Marketing</li>
+                            <li>Content Marketing</li>
+                            <li>Email Marketing</li>
+                            <li>Pay-Per-Click Advertising</li>
+                            <li>Analytics and Performance Tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="data-analysis-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fas fa-chart-bar"></i></div>
+                <div>
+                    <h3>Data Analysis</h3>
+                    <p>Transform data into actionable insights</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Data Analysis Illustration" loading="lazy">
+                </div>
+                <div>
+                    <p>Our data analysis services help businesses make sense of their data and use it to drive decision-making. We transform raw data into meaningful insights that can improve operations, identify opportunities, and solve problems.</p>
+                    <p>We use advanced analytics tools and techniques to process and analyze data from various sources. Our goal is to provide you with clear, actionable information that supports your business objectives.</p>
+                    <div class="modal-features">
+                        <h4>What We Offer:</h4>
+                        <ul>
+                            <li>Data collection and processing</li>
+                            <li>Statistical analysis</li>
+                            <li>Data visualization and reporting</li>
+                            <li>Predictive analytics</li>
+                            <li>Business intelligence solutions</li>
+                            <li>Data-driven strategy development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section - UPDATED -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Meet Our Team</h2>
+                <p>Our dedicated professionals are committed to delivering exceptional IT solutions</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member scale-in delay-1">
+                    <div class="member-photo">
+                        <!-- <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Kwame Mensah, CEO" loading="lazy"> -->
+                        <img src="images/dummy.png" alt="Richard Djanie, Data Engineer" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Richard Djanie</h3>
+                        <div class="position">Chief Executive Officer - Data Engineer</div>
+                        <!-- <p>Data Engineer</p> -->
+                    </div>
+                </div>
+                <div class="team-member scale-in delay-2">
+                    <div class="member-photo">
+                        <img src="images/dummy.png" alt="Michael Amon, Network Engineer" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Michael Amon</h3>
+                        <div class="position">Operations Manager - Telecoms Engineer</div>
+                        
+                    </div>
+                </div>
+                <div class="team-member scale-in delay-3">
+                    <div class="member-photo">
+                        <img src="images/dummy.png" alt="Obed Mintah, Programmer / App Developer" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Obed Mintah</h3>
+                        <div class="position">Programmer / App Developer</div>
+                        
+                    </div>
+                </div>
+                <div class="team-member scale-in delay-4">
+                    <div class="member-photo">
+                        <img src="images/dummy.png" alt="Nicholas Abbey, UX /UI Designer" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Nicholas Abbey</h3>
+                        <div class="position">Digital Marketing Specialist</div>
+                        
+                    </div>
+                </div>
+                <div class="team-member scale-in delay-5">
+                    <div class="member-photo">
+                        <img src="images/dummy.png" alt="Jennifer Dawson, Graphics & Brands Designer" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Jennifer Dawson</h3>
+                        <div class="position">Graphics & Brands Designer</div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="team-member scale-in delay-6">
+                    <div class="member-photo">
+                        <img src="images/dummy.png" alt="Francis Akpobi, Marketing" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Francis Akpobi</h3>
+                        <div class="position">Marketing</div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container fade-in">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>We take pride in delivering exceptional IT solutions. Here's what our clients have to say about us.</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-slides">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            "Proodent IT Solutions transformed our business with their custom software. The team was professional, responsive, and delivered exactly what we needed. Highly recommended!"
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-image">MJ</div>
+                            <div>
+                                <div class="testimonial-name">Mrs. Jaqueline Niikwei</div>
+                                <div class="testimonial-role">CEO, Razaksco Consult</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            "Their website development service exceeded our expectations. Our online presence has significantly improved, leading to a 40% increase in leads. Great work!"
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-image">MO</div>
+                            <div>
+                                <div class="testimonial-name">Mrs. Olivia Abbor</div>
+                                <div class="testimonial-role">Administrator, Sky View Academy</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            "The networking solutions provided by Proodent IT have made our operations seamless. Their 24/7 support gives us peace of mind. Excellent service!"
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-image">NK</div>
+                            <div>
+                                <div class="testimonial-name">Nana Kwasi</div>
+                                <div class="testimonial-role">IT Manager, Noble Ideas Industries Limited</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active" data-testimonial="0"></div>
+                    <div class="testimonial-dot" data-testimonial="1"></div>
+                    <div class="testimonial-dot" data-testimonial="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text slide-in-left">
+                    <h2>About Proodent IT Solutions</h2>
+                    <p>Proodent IT Solutions is a leading technology company based in Accra, Ghana, dedicated to providing innovative IT solutions to businesses of all sizes.</p>
+                    <p>Our team of experienced professionals is committed to delivering high-quality services that help our clients achieve their business objectives through technology.</p>
+                    <p>With a focus on customer satisfaction and cutting-edge solutions, we strive to be your trusted technology partner.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">✓</div>
+                            <div>Experienced IT Professionals</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">✓</div>
+                            <div>Customized Solutions for Your Business</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">✓</div>
+                            <div>24/7 Support and Maintenance</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">✓</div>
+                            <div>Competitive Pricing</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image slide-in-right">
+                    <div class="about-image-content">
+                        <h3>Your Trusted IT Partner</h3>
+                        <p>Based in Accra, Ghana</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="core-values">
+        <div class="container fade-in">
+            <div class="section-title">
+                <h2>Our Core Values</h2>
+                <p>The principles that guide everything we do at Proodent IT Solutions</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Innovation</h3>
+                    <p>We embrace creativity and forward-thinking to design IT solutions that are not only smart but future-ready, helping our clients stay ahead in a fast-changing digital world.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Integrity</h3>
+                    <p>We believe trust is earned through honesty, transparency, and accountability—values that guide every decision, project, and partnership we build.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-star"></i></div>
+                    <h3>Excellence</h3>
+                    <p>We are committed to delivering beyond expectations, combining expertise and passion to create solutions that drive real results and lasting impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section class="insights" id="insights">
+        <div class="container fade-in">
+            <div class="section-title">
+                <h2>IT Insights</h2>
+                <p>Expert advice and insights to help your business thrive in the digital age</p>
+            </div>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <div class="insight-image">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Professional Business Website Example" loading="lazy">
+                    </div>
+                    <div class="insight-content">
+                        <h3>5 Reasons Why Your Business Needs a Professional Website</h3>
+                        <p>In today's digital age, having a professional website is no longer optional for businesses. Here's why it's essential for your growth.</p>
+                        <a href="#" class="insight-read-more" data-insight="insight1">Read More →</a>
+                    </div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-image">
+                        <img src="https://www.roncucciandpartners.com/wp-content/uploads/2023/10/foto-2-rivoluzione-digitale-in-africa.png" alt="Digital Marketing Transformation in Africa" loading="lazy">
+                    </div>
+                    <div class="insight-content">
+                        <h3>How Digital Marketing Can Transform Your Business in Ghana</h3>
+                        <p>Discover how effective digital marketing strategies can help Ghanaian businesses reach new customers and increase revenue.</p>
+                        <a href="#" class="insight-read-more" data-insight="insight2">Read More →</a>
+                    </div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-image">
+                        <img src="https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Cybersecurity Best Practices Illustration" loading="lazy">
+                    </div>
+                    <div class="insight-content">
+                        <h3>Cybersecurity Best Practices for Small Businesses in Accra</h3>
+                        <p>Protect your business from cyber threats with these essential security practices tailored for small businesses in Accra.</p>
+                        <a href="#" class="insight-read-more" data-insight="insight3">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insight Modals -->
+    <div id="insight1-modal" class="insight-modal">
+        <div class="insight-modal-content">
+            <span class="close-insight-modal">&times;</span>
+            <div class="insight-modal-header">
+                <h3>5 Reasons Why Your Business Needs a Professional Website</h3>
+            </div>
+            <div class="insight-modal-body">
+                <p>In today's digital age, having a professional website is no longer optional for businesses. It has become an essential tool for growth and success. Here are five compelling reasons why your business needs a professional website:</p>
+                <p><strong>1. Credibility and Trust:</strong> A well-designed website establishes your business as legitimate and trustworthy. Customers are more likely to engage with companies that have an online presence.</p>
+                <p><strong>2. 24/7 Availability:</strong> Your website works for you around the clock, providing information to potential customers even when your physical location is closed.</p>
+                <p><strong>3. Marketing and Branding:</strong> A website serves as the central hub for your marketing efforts, allowing you to showcase your products, services, and brand identity.</p>
+                <p><strong>4. Customer Convenience:</strong> Customers can find information, make purchases, or contact you at their convenience, improving their overall experience with your business.</p>
+                <p><strong>5. Competitive Advantage:</strong> In today's market, not having a website puts you at a significant disadvantage compared to competitors who do.</p>
+                <p>Investing in a professional website is one of the most important decisions you can make for your business's future growth and success.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="insight2-modal" class="insight-modal">
+        <div class="insight-modal-content">
+            <span class="close-insight-modal">&times;</span>
+            <div class="insight-modal-header">
+                <h3>How Digital Marketing Can Transform Your Business</h3>
+            </div>
+            <div class="insight-modal-body">
+                <p>Digital marketing has revolutionized how businesses reach and engage with customers. In Ghana, where internet penetration is rapidly increasing, digital marketing offers unprecedented opportunities for business growth.</p>
+                <p><strong>Increased Reach:</strong> Digital marketing allows you to reach customers beyond your immediate geographic location, tapping into markets across Ghana and even internationally.</p>
+                <p><strong>Targeted Advertising:</strong> Unlike traditional marketing, digital platforms enable precise targeting based on demographics, interests, and behaviors, ensuring your message reaches the right audience.</p>
+                <p><strong>Cost-Effectiveness:</strong> Digital marketing often provides better ROI than traditional methods, with options suitable for businesses of all sizes and budgets.</p>
+                <p><strong>Measurable Results:</strong> With digital marketing, you can track and measure the performance of your campaigns in real-time, allowing for data-driven decisions and optimization.</p>
+                <p><strong>Enhanced Customer Engagement:</strong> Social media and other digital channels facilitate two-way communication with customers, building stronger relationships and brand loyalty.</p>
+                <p>By implementing a comprehensive digital marketing strategy, Ghanaian businesses can significantly increase their visibility, attract more customers, and drive sustainable growth in today's competitive marketplace.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="insight3-modal" class="insight-modal">
+        <div class="insight-modal-content">
+            <span class="close-insight-modal">&times;</span>
+            <div class="insight-modal-header">
+                <h3>Cybersecurity Best Practices for Small Businesses</h3>
+            </div>
+            <div class="insight-modal-body">
+                <p>As businesses increasingly rely on digital technologies, cybersecurity has become a critical concern. Small businesses are particularly vulnerable to cyber threats, making it essential to implement robust security measures.</p>
+                <p><strong>Employee Training:</strong> Educate your staff about common cyber threats like phishing emails and social engineering attacks. Regular training can significantly reduce security risks.</p>
+                <p><strong>Strong Password Policies:</strong> Implement and enforce strong password requirements, including regular changes and the use of multi-factor authentication where possible.</p>
+                <p><strong>Regular Software Updates:</strong> Keep all software, including operating systems and applications, up to date with the latest security patches to protect against known vulnerabilities.</p>
+                <p><strong>Data Backup:</strong> Regularly back up critical business data to secure offsite locations or cloud services to ensure business continuity in case of data loss or ransomware attacks.</p>
+                <p><strong>Network Security:</strong> Use firewalls, encryption, and secure Wi-Fi networks to protect your business data from unauthorized access.</p>
+                <p>By implementing these cybersecurity best practices, small businesses can protect their valuable data, maintain customer trust, and avoid the potentially devastating consequences of cyber attacks.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section - UPDATED -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for all your IT needs</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info slide-in-left">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon-plain"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>Accra, Ghana</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon-plain"><i class="fas fa-phone"></i></div>
+                            <div><a href="tel:+233209332094" class="contact-link">+233 20 933 2094</a></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon-plain"><i class="fas fa-envelope"></i></div>
+                            <div><a href="mailto:proodent.it@gmail.com" class="contact-link">proodent.it@gmail.com</a></div>
+                        </div>
+                    </div>
+                    <div class="business-hours">
+                        <h4>Business Hours</h4>
+                        <p>Sunday to Friday: 8:00 AM - 5:00 PM</p>
+                    </div>
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com/proodentit" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/proodentit" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/proodentit" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/company/proodentit" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://tiktok.com/@proodentit" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/233209332094" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form slide-in-right">
+                    <form id="contactForm" action="https://formsubmit.co/proodent.it@gmail.com" method="POST">
+        
+                        <!-- FormSubmit config -->
+                        <input type="hidden" name="_subject" value="New Contact Form Submission from Proodent IT Website">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - UPDATED -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">P</div>
+                        <div class="footer-logo-text">Proodent IT</div>
+                    </div>
+                    <p>Smart IT, Smarter Solutions. Providing comprehensive technology services in Ghana and beyond.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#insights">Insights</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#" class="service-details-btn" data-service="app-dev">Application Development</a></li>
+                        <li><a href="#" class="service-details-btn" data-service="web-dev">Website Development</a></li>
+                        <li><a href="#" class="service-details-btn" data-service="graphic-design">Graphic Design</a></li>
+                        <li><a href="#" class="service-details-btn" data-service="networking">Computer Networking</a></li>
+                        <li><a href="#" class="service-details-btn" data-service="consultancy">IT Consultancy</a></li>
+                        <li><a href="#" class="service-details-btn" data-service="digital-marketing">Digital Marketing</a></li>
+                        <li><a href="#" class="service-details-btn" data-service="data-analysis">Data Analysis</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Accra, Ghana</li>
+                        <li><i class="fas fa-phone"></i> +233 20 933 2094</li>
+                        <li><i class="fas fa-envelope"></i> proodent.it@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Proodent IT Solutions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Proodent IT Solutions",
+        "description": "Comprehensive IT services in Accra, Ghana including application development, website development, graphic design, computer networking, consultancy, data analysis, and digital marketing.",
+        "url": "https://www.proodentit.com",
+        "telephone": "+233209332094",
+        "email": "proodent.it@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Accra",
+            "addressCountry": "GH"
+        },
+        "openingHours": "Mo-Su 08:00-17:00",
+        "areaServed": "Accra, Ghana",
+        "serviceType": [
+            "Application Development",
+            "Website Development",
+            "Graphic Design",
+            "Computer Networking",
+            "IT Consultancy",
+            "Data Analysis",
+            "Digital Marketing"
+        ]
+    }
+    </script>
+
+    <!-- Enhanced JavaScript - Keeping your original JavaScript with fixes for pop-ups -->
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+            this.textContent = this.textContent === '☰' ? '✕' : '☰';
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('nav ul').classList.remove('active');
+                document.querySelector('.mobile-menu').textContent = '☰';
+            });
+        });
+
+        // Technology Slider with enhanced transitions
+        const techSlides = document.querySelector('.slides');
+        const techDots = document.querySelectorAll('.slider-dot');
+        let currentTechSlide = 0;
+        let techSlideInterval;
+
+        function showTechSlide(n) {
+            // Add fade out effect
+            const currentSlide = document.querySelectorAll('.slide')[currentTechSlide];
+            currentSlide.style.opacity = '0';
+            currentSlide.style.transition = 'opacity 0.5s ease';
+            
+            setTimeout(() => {
+                currentTechSlide = (n + techDots.length) % techDots.length;
+                techSlides.style.transform = `translateX(-${currentTechSlide * 100}%)`;
+                
+                // Update dots
+                techDots.forEach(dot => dot.classList.remove('active'));
+                techDots[currentTechSlide].classList.add('active');
+                
+                // Add fade in effect
+                const newSlide = document.querySelectorAll('.slide')[currentTechSlide];
+                newSlide.style.opacity = '1';
+            }, 500);
+        }
+
+        techDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(techSlideInterval);
+                showTechSlide(index);
+                startTechSlider();
+            });
+        });
+
+        function startTechSlider() {
+            techSlideInterval = setInterval(() => {
+                showTechSlide(currentTechSlide + 1);
+            }, 5000);
+        }
+
+        // Start the slider
+        startTechSlider();
+
+        // Testimonial Slider with enhanced transitions
+        const testimonialSlides = document.querySelector('.testimonial-slides');
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+        let currentTestimonialSlide = 0;
+        let testimonialSlideInterval;
+
+        function showTestimonialSlide(n) {
+            // Add fade out effect
+            const currentSlide = document.querySelectorAll('.testimonial-slide')[currentTestimonialSlide];
+            currentSlide.style.opacity = '0';
+            currentSlide.style.transition = 'opacity 0.5s ease';
+            
+            setTimeout(() => {
+                currentTestimonialSlide = (n + testimonialDots.length) % testimonialDots.length;
+                testimonialSlides.style.transform = `translateX(-${currentTestimonialSlide * 100}%)`;
+                
+                // Update dots
+                testimonialDots.forEach(dot => dot.classList.remove('active'));
+                testimonialDots[currentTestimonialSlide].classList.add('active');
+                
+                // Add fade in effect
+                const newSlide = document.querySelectorAll('.testimonial-slide')[currentTestimonialSlide];
+                newSlide.style.opacity = '1';
+            }, 500);
+        }
+
+        testimonialDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(testimonialSlideInterval);
+                showTestimonialSlide(index);
+                startTestimonialSlider();
+            });
+        });
+
+        function startTestimonialSlider() {
+            testimonialSlideInterval = setInterval(() => {
+                showTestimonialSlide(currentTestimonialSlide + 1);
+            }, 6000);
+        }
+
+        // Start the testimonial slider
+        startTestimonialSlider();
+
+        // FIXED: Service Modals - Proper event listener setup
+        const serviceButtons = document.querySelectorAll('.service-details-btn');
+        const serviceModals = document.querySelectorAll('.modal');
+        const closeButtons = document.querySelectorAll('.close-modal');
+
+        serviceButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const serviceType = this.getAttribute('data-service');
+                const modal = document.getElementById(`${serviceType}-modal`);
+                
+                if (modal) {
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                }
+            });
+        });
+
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const modal = this.closest('.modal');
+                if (modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Restore scrolling
+                }
+            });
+        });
+
+        // FIXED: Insight Modals
+        const insightLinks = document.querySelectorAll('.insight-read-more');
+        const insightModals = document.querySelectorAll('.insight-modal');
+        const closeInsightButtons = document.querySelectorAll('.close-insight-modal');
+
+        insightLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const insightType = this.getAttribute('data-insight');
+                const modal = document.getElementById(`${insightType}-modal`);
+                
+                if (modal) {
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        closeInsightButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const modal = this.closest('.insight-modal');
+                if (modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Close modals when clicking outside
+        window.addEventListener('click', function(event) {
+            serviceModals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            insightModals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Contact Form Submission with enhanced feedback
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitBtn = this.querySelector('.btn-submit');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission (in production, this would be a real API call)
+            setTimeout(() => {
+                // Show success message with animation
+                const successMessage = document.createElement('div');
+                successMessage.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background-color: var(--primary-green);
+                    color: white;
+                    padding: 15px 25px;
+                    border-radius: 5px;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                    z-index: 3000;
+                    transform: translateX(100%);
+                    transition: transform 0.5s ease;
+                `;
+                successMessage.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent.';
+                document.body.appendChild(successMessage);
+                
+                // Animate in
+                setTimeout(() => {
+                    successMessage.style.transform = 'translateX(0)';
+                }, 10);
+                
+                // Reset form
+                this.reset();
+                
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                
+                // Remove success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.transform = 'translateX(100%)';
+                    setTimeout(() => {
+                        document.body.removeChild(successMessage);
+                    }, 500);
+                }, 5000);
+            }, 1500);
+        });
+
+        // Smooth scrolling for anchor links with offset
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect with parallax
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const scrollPosition = window.scrollY;
+            
+            if (scrollPosition > 100) {
+                header.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                header.style.backgroundColor = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+            
+            // Parallax effect for hero section
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                const scrolled = window.scrollY;
+                const rate = scrolled * -0.5;
+                hero.style.transform = `translate3d(0px, ${rate}px, 0px)`;
+            }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Add staggered animation for child elements
+                    if (entry.target.classList.contains('services-grid')) {
+                        const cards = entry.target.querySelectorAll('.service-card');
+                        cards.forEach((card, index) => {
+                            setTimeout(() => {
+                                card.classList.add('visible');
+                            }, index * 100);
+                        });
+                    }
+                    
+                    if (entry.target.classList.contains('team-grid')) {
+                        const members = entry.target.querySelectorAll('.team-member');
+                        members.forEach((member, index) => {
+                            setTimeout(() => {
+                                member.classList.add('visible');
+                            }, index * 100);
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.querySelectorAll('.fade-in, .scale-in, .slide-in-left, .slide-in-right, .services-grid, .team-grid').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add hover effects to service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add typing effect to hero tagline - YOUR ORIGINAL CODE
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.textContent = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            
+            type();
+        }
+
+        // Initialize typing effect on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const tagline = document.querySelector('.hero .tagline');
+            if (tagline) {
+                const originalText = tagline.textContent;
+                typeWriter(tagline, originalText, 50);
+            }
+            
+            // Add initial animation to hero
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                setTimeout(() => {
+                    heroContent.classList.add('visible');
+                }, 500);
+            }
+        });
+
+        // Add scroll progress indicator
+        function createScrollProgress() {
+            const progressBar = document.createElement('div');
+            progressBar.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 3px;
+                background-color: var(--primary-green);
+                z-index: 9999;
+                transition: width 0.1s ease;
+            `;
+            document.body.appendChild(progressBar);
+            
+            window.addEventListener('scroll', function() {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + "%";
+            });
+        }
+
+        // Create scroll progress bar
+        createScrollProgress();
+        
+        // FIXED: Add event listeners for footer service buttons
+        document.querySelectorAll('.footer-column a.service-details-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const serviceType = this.getAttribute('data-service');
+                const modal = document.getElementById(`${serviceType}-modal`);
+                
+                if (modal) {
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
