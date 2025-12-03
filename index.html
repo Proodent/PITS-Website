@@ -1910,7 +1910,7 @@
                     </div>
                 </div>
                 <div class="contact-form slide-in-right">
-                    <form id="contactForm" action="https://formsubmit.co/proodent.it@gmail.com" method="POST">
+                    <form id="contactForm" method="POST">
         
                         <!-- FormSubmit config -->
                         <input type="hidden" name="_subject" value="New Contact Form Submission from Proodent IT Website">
@@ -2423,5 +2423,59 @@
             });
         });
     </script>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault(); // Stop normal redirect
+    
+        const form = e.target;
+        const formData = new FormData(form);
+    
+        // Add FormSubmit required fields
+        formData.append("_captcha", "false");
+        formData.append("_template", "table");
+        formData.append("_subject", "New Contact Form Submission from Proodent IT Website");
+        formData.append("_next", window.location.href); // stays on the same page
+    
+        fetch("https://formsubmit.co/ajax/proodent.it@gmail.com", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Show custom success message
+            showSuccessMessage();
+            form.reset();
+        })
+        .catch(error => {
+            alert("There was an error sending your message. Please try again.");
+        });
+    });
+    
+    function showSuccessMessage() {
+        const msg = document.createElement("div");
+        msg.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #28a745;
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 9999;
+            font-size: 15px;
+        `;
+        msg.innerHTML = "<strong>✔ Message sent!</strong> We will get back to you soon.";
+        document.body.appendChild(msg);
+    
+        setTimeout(() => {
+            msg.style.opacity = "0";
+            msg.style.transition = "0.5s";
+            setTimeout(() => msg.remove(), 500);
+        }, 5000);
+    }
+</script>
+
 </body>
 </html>
