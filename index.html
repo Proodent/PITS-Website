@@ -2204,56 +2204,56 @@
         });
 
         // Contact Form Submission with enhanced feedback
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // document.getElementById('contactForm').addEventListener('submit', function(e) {
+        //     e.preventDefault();
             
-            // Show loading state
-            const submitBtn = this.querySelector('.btn-submit');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
+        //     // Show loading state
+        //     const submitBtn = this.querySelector('.btn-submit');
+        //     const originalText = submitBtn.textContent;
+        //     submitBtn.textContent = 'Sending...';
+        //     submitBtn.disabled = true;
             
-            // Simulate form submission (in production, this would be a real API call)
-            setTimeout(() => {
-                // Show success message with animation
-                const successMessage = document.createElement('div');
-                successMessage.style.cssText = `
-                    position: fixed;
-                    top: 20px;
-                    right: 20px;
-                    background-color: var(--primary-green);
-                    color: white;
-                    padding: 15px 25px;
-                    border-radius: 5px;
-                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-                    z-index: 3000;
-                    transform: translateX(100%);
-                    transition: transform 0.5s ease;
-                `;
-                successMessage.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent.';
-                document.body.appendChild(successMessage);
+        //     // Simulate form submission (in production, this would be a real API call)
+        //     setTimeout(() => {
+        //         // Show success message with animation
+        //         const successMessage = document.createElement('div');
+        //         successMessage.style.cssText = `
+        //             position: fixed;
+        //             top: 20px;
+        //             right: 20px;
+        //             background-color: var(--primary-green);
+        //             color: white;
+        //             padding: 15px 25px;
+        //             border-radius: 5px;
+        //             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        //             z-index: 3000;
+        //             transform: translateX(100%);
+        //             transition: transform 0.5s ease;
+        //         `;
+        //         successMessage.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent.';
+        //         document.body.appendChild(successMessage);
                 
-                // Animate in
-                setTimeout(() => {
-                    successMessage.style.transform = 'translateX(0)';
-                }, 10);
+        //         // Animate in
+        //         setTimeout(() => {
+        //             successMessage.style.transform = 'translateX(0)';
+        //         }, 10);
                 
-                // Reset form
-                this.reset();
+        //         // Reset form
+        //         this.reset();
                 
-                // Reset button
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
+        //         // Reset button
+        //         submitBtn.textContent = originalText;
+        //         submitBtn.disabled = false;
                 
-                // Remove success message after 5 seconds
-                setTimeout(() => {
-                    successMessage.style.transform = 'translateX(100%)';
-                    setTimeout(() => {
-                        document.body.removeChild(successMessage);
-                    }, 500);
-                }, 5000);
-            }, 1500);
-        });
+        //         // Remove success message after 5 seconds
+        //         setTimeout(() => {
+        //             successMessage.style.transform = 'translateX(100%)';
+        //             setTimeout(() => {
+        //                 document.body.removeChild(successMessage);
+        //             }, 500);
+        //         }, 5000);
+        //     }, 1500);
+        // });
 
         // Smooth scrolling for anchor links with offset
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2423,12 +2423,5 @@
             });
         });
     </script>
-    <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-        // Ensure form submits normally even inside modals
-        e.stopPropagation();
-    });
-    </script>
-
 </body>
 </html>
