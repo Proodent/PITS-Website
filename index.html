@@ -2203,57 +2203,7 @@
             });
         });
 
-        // Contact Form Submission with enhanced feedback
-        // document.getElementById('contactForm').addEventListener('submit', function(e) {
-        //     e.preventDefault();
-            
-        //     // Show loading state
-        //     const submitBtn = this.querySelector('.btn-submit');
-        //     const originalText = submitBtn.textContent;
-        //     submitBtn.textContent = 'Sending...';
-        //     submitBtn.disabled = true;
-            
-        //     // Simulate form submission (in production, this would be a real API call)
-        //     setTimeout(() => {
-        //         // Show success message with animation
-        //         const successMessage = document.createElement('div');
-        //         successMessage.style.cssText = `
-        //             position: fixed;
-        //             top: 20px;
-        //             right: 20px;
-        //             background-color: var(--primary-green);
-        //             color: white;
-        //             padding: 15px 25px;
-        //             border-radius: 5px;
-        //             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        //             z-index: 3000;
-        //             transform: translateX(100%);
-        //             transition: transform 0.5s ease;
-        //         `;
-        //         successMessage.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent.';
-        //         document.body.appendChild(successMessage);
-                
-        //         // Animate in
-        //         setTimeout(() => {
-        //             successMessage.style.transform = 'translateX(0)';
-        //         }, 10);
-                
-        //         // Reset form
-        //         this.reset();
-                
-        //         // Reset button
-        //         submitBtn.textContent = originalText;
-        //         submitBtn.disabled = false;
-                
-        //         // Remove success message after 5 seconds
-        //         setTimeout(() => {
-        //             successMessage.style.transform = 'translateX(100%)';
-        //             setTimeout(() => {
-        //                 document.body.removeChild(successMessage);
-        //             }, 500);
-        //         }, 5000);
-        //     }, 1500);
-        // });
+        
 
         // Smooth scrolling for anchor links with offset
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2424,58 +2374,84 @@
         });
     </script>
 
-    <script>
+   <script>
         document.getElementById("contactForm").addEventListener("submit", function (e) {
-        e.preventDefault(); // Stop normal redirect
-    
-        const form = e.target;
-        const formData = new FormData(form);
-    
-        // Add FormSubmit required fields
-        formData.append("_captcha", "false");
-        formData.append("_template", "table");
-        formData.append("_subject", "New Contact Form Submission from Proodent IT Website");
-        formData.append("_next", window.location.href); // stays on the same page
-    
-        fetch("https://formsubmit.co/ajax/proodent.it@gmail.com", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Show custom success message
-            showSuccessMessage();
-            form.reset();
-        })
-        .catch(error => {
-            alert("There was an error sending your message. Please try again.");
+            e.preventDefault(); // Prevent original redirect
+        
+            const form = e.target;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector(".btn-submit");
+        
+            // Change button to "Sending..."
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = "Sending...";
+            submitBtn.disabled = true;
+        
+            // Add FormSubmit hidden fields
+            formData.append("_captcha", "false");
+            formData.append("_template", "table");
+            formData.append("_subject", "New Contact Form Submission from Proodent IT Website");
+        
+            fetch("https://formsubmit.co/ajax/proodent.it@gmail.com", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                showSuccessMessage();
+        
+                form.reset();
+        
+                // Restore button after 2 seconds
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, 1500);
+            })
+            .catch(error => {
+                alert("There was an error sending your message. Please try again.");
+        
+                // Restore button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
         });
-    });
-    
-    function showSuccessMessage() {
-        const msg = document.createElement("div");
-        msg.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #28a745;
-            color: #fff;
-            padding: 15px 25px;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            z-index: 9999;
-            font-size: 15px;
-        `;
-        msg.innerHTML = "<strong>✔ Message sent!</strong> We will get back to you soon.";
-        document.body.appendChild(msg);
-    
-        setTimeout(() => {
-            msg.style.opacity = "0";
-            msg.style.transition = "0.5s";
-            setTimeout(() => msg.remove(), 500);
-        }, 5000);
-    }
-</script>
+        
+        function showSuccessMessage() {
+            const msg = document.createElement("div");
+            msg.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #28a745;
+                color: #fff;
+                padding: 15px 25px;
+                border-radius: 8px;
+                font-size: 16px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+                z-index: 9999;
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: all 0.4s ease;
+            `;
+            msg.innerHTML = `<strong>✔ Message Sent!</strong><br>We will get back to you soon.`;
+        
+            document.body.appendChild(msg);
+        
+            // Slide-in animation
+            setTimeout(() => {
+                msg.style.opacity = "1";
+                msg.style.transform = "translateY(0)";
+            }, 50);
+        
+            // Disappear after 5 seconds
+            setTimeout(() => {
+                msg.style.opacity = "0";
+                msg.style.transform = "translateY(-10px)";
+                setTimeout(() => msg.remove(), 400);
+            }, 5000);
+        }
+        </script>
 
 </body>
 </html>
